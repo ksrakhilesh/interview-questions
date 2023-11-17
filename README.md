@@ -1,4 +1,4 @@
-**Sub-Problem: Optimal Bill Distribution**
+**Optimal Bill Distribution**
 
 You are given a list of bills paid by a group of friends. Each bill indicates the payer, the total amount, and the friends involved. 
 - Design a function to verify whether the transactions effectively settle the debts and distribute expenses fairly among friends.

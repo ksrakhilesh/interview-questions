@@ -2,7 +2,7 @@
 
 You are tasked with designing an expense sharing system that allows users to track shared expenses among a group of people. The system should support the following functionalities:
 
-#### Add Expense
+#### (Q1) Add Expense
 
 Implement a function that allows a user to add an expense. The function should take the following parameters:
 
@@ -13,7 +13,7 @@ Implement a function that allows a user to add an expense. The function should t
 - Metadata about the expense
 
 
-#### Generate Individual Summary
+#### (Q2) Generate Individual Summary
 
 Implement a function that generates a summary for each individual user. This summary should show all the expenses they are involved in and whether they owe money or are owed money.
 
@@ -51,7 +51,7 @@ A owes B 50 (300 - 250)
 D owes A 250
 ```
 
-#### List User's Expenses
+#### (Q3) List User's Expenses
 
 Create a function that lists all the expenses a given user is involved in. This should include details of the expenses, such as the amount, shares, and the other participants.
 
@@ -65,12 +65,19 @@ Expected User A's Expenses List:
 3. C Pays 1000 with A, B, and D (PERCENTAGE => A = 25 B = 30 D = 10)
 
 
-#### Settle Funds
+#### (Q4) Settle Funds
 
 Develop a function that calculates and performs fund settlements between two users. Given two users, find the simplest way to settle the debts, if any exist.
 
 Expected User A and B Settle Funds:
 ```python
 user_a_summary = expense_system.settle_funds("A", "B")
-A has to Pay B 50
+>>> A has to Pay B 50
 ```
+
+
+Note: 
+> 1. We are trying to solve the above problem in a DS Algo (runtime) style and not building or solving it as an application
+> 2. You can have any amount of space complexity.
+> 3. add_expense can have any amount of time and space complexity.
+> 4. generate_individual_summary, settle_funds and list_user_expenses should have least time complexity

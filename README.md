@@ -12,11 +12,16 @@ Implement a function that allows a user to add an expense. The function should t
 - Shares of each user (which can be equal, exact amounts, or percentages)
 - Metadata about the expense
 
+
+#### Generate Individual Summary
+
+Implement a function that generates a summary for each individual user. This summary should show all the expenses they are involved in and whether they owe money or are owed money.
+
 Example 1: 
 ```python
 expense_system.add_expense("A", 1000, ["B", "C", "D"], "equal")
 ```
-Expected Summary:
+Expected User A Summary:
 ```
 B owes A 250
 C owes A 250
@@ -27,24 +32,23 @@ Example 2:
 ```python
 expense_system.add_expense("B", 1000, ["A", "C"], "exact", {"A": 300, "C": 500})
 ```
-Expected Summary:
-```
+Expected User B Summary:
+
+```python
+user_a_summary = expense_system.generate_individual_summary("B")
 A owes B 50 (300 - 250)
-C owes A 250
 C owes B 500
-D owes A 250
 ```
 
 Example 3:
 ```python
 expense_system.add_expense("C", 1000, ["A", "B", "D"], "percentage", {"A": 25, "B": 30, "D": 10})
 ```
-Expected Summary:
-```
+Expected User A Summary:
+```python
+user_a_summary = expense_system.generate_individual_summary("A")
 A owes B 50 (300 - 250)
-C owes B 200
 D owes A 250
-D owes C 100
 ```
 
 #### List User's Expenses
@@ -55,30 +59,12 @@ Example:
 ```python
 user_a_expenses = expense_system.list_user_expenses("A")
 ```
-Expected User A's Expenses:
+Expected User A's Expenses List:
 1. A Pays 1000 with B, C, and D (EQUAL)
 2. B Pays 1000 with A and C (EXACT => A = 300 C = 500)
 3. C Pays 1000 with A, B, and D (PERCENTAGE => A = 25 B = 30 D = 10)
 
-#### Generate Individual Summary
-
-Implement a function that generates a summary for each individual user. This summary should show all the expenses they are involved in and whether they owe money or are owed money.
-
-Example:
-```python
-user_a_summary = expense_system.generate_individual_summary("A")
-```
-Expected User A's Summary:
-```
-A owes B 50
-C owes A 250
-D owes A 250
-```
 
 #### Settle Funds
 
 Develop a function that calculates and performs fund settlements between two users. Given two users, find the simplest way to settle the debts, if any exist.
-
-#### Generate Overall Summary
-
-Create a function that generates an overall summary of the expenses. The summary should include details of who owes whom and how much.

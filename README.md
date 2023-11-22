@@ -76,7 +76,7 @@ user_a_summary = expense_system.settle_funds("A", "B")
 ```
 
 
-### `Note:`
+### Note:
 > 1. We are trying to solve the above problem in a DS Algo (runtime) style and not building or solving it as an application
 > 2. You can have any amount of space complexity.
 > 3. add_expense can have any amount of time and space complexity.

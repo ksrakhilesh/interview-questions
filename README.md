@@ -68,3 +68,9 @@ Expected User A's Expenses List:
 #### Settle Funds
 
 Develop a function that calculates and performs fund settlements between two users. Given two users, find the simplest way to settle the debts, if any exist.
+
+Expected User A and B Settle Funds:
+```python
+user_a_summary = expense_system.settle_funds("A", "B")
+A has to Pay B 50
+```

@@ -60,10 +60,11 @@ Example:
 user_a_expenses = expense_system.list_user_expenses("A")
 ```
 Expected User A's Expenses List:
+```
 1. A Pays 1000 with B, C, and D (EQUAL)
 2. B Pays 1000 with A and C (EXACT => A = 300 C = 500)
 3. C Pays 1000 with A, B, and D (PERCENTAGE => A = 25 B = 30 D = 10)
-
+```
 
 #### (Q4) Settle Funds
 
@@ -81,3 +82,6 @@ user_a_summary = expense_system.settle_funds("A", "B")
 > 2. You can have any amount of space complexity.
 > 3. add_expense can have any amount of time and space complexity.
 > 4. generate_individual_summary, settle_funds and list_user_expenses should have least time complexity
+
+### Additional Note: 
+>  If you feel like the problem will take more than 40 minutes to solve, Start with just Equal Shares as the input share type (Skip Both exact and percentage share types till the end). Once all the functionalities are implemented you can change the share types to be dynamic ( Equal, Exact & Percentage )

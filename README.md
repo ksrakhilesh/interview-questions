@@ -28,6 +28,12 @@ C owes A 250
 D owes A 250
 ```
 
+Expected User B Summary:
+```
+B owes A 250
+```
+
+
 Example 2:
 ```python
 expense_system.add_expense("B", 1000, ["A", "C"], "exact", {"A": 300, "C": 500})
@@ -37,6 +43,13 @@ Expected User B Summary:
 ```python
 user_a_summary = expense_system.generate_individual_summary("B")
 A owes B 50 (300 - 250)
+C owes B 500
+```
+Expected User C Summary:
+
+```python
+user_a_summary = expense_system.generate_individual_summary("B")
+C owes A 250
 C owes B 500
 ```
 
